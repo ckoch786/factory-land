@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://d14mkam2xsw7l"]
+
+[ext_resource type="Texture2D" uid="uid://dmo3onr16i4pw" path="res://Assets/Structures & Machines/Miner_Machine_1_Mining.png" id="1_6mokn"]
+[ext_resource type="Script" uid="uid://du3eix1bvukwf" path="res://Scenes/miner_machine_1.gd" id="2_rid8p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rid8p"]
+atlas = ExtResource("1_6mokn")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekl0x"]
+atlas = ExtResource("1_6mokn")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha4d1"]
+atlas = ExtResource("1_6mokn")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glqk7"]
+atlas = ExtResource("1_6mokn")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkn7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rid8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekl0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha4d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glqk7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="MinerMachine1" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_dkn7c")
+frame_progress = 0.03781994
+script = ExtResource("2_rid8p")

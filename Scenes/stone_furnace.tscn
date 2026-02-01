@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs7a84ut7mi6r"]
+
+[ext_resource type="Texture2D" uid="uid://iv6klkbsulga" path="res://Assets/Structures & Machines/Stone_Furnace_Active.png" id="1_uvjj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vleli"]
+atlas = ExtResource("1_uvjj3")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqo4y"]
+atlas = ExtResource("1_uvjj3")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hesd"]
+atlas = ExtResource("1_uvjj3")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xgiib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vleli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqo4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hesd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StoneFurnace" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_xgiib")
+frame_progress = 0.7247004

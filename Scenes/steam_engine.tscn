@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://cenvapfpkpb71"]
+
+[ext_resource type="Texture2D" uid="uid://dx6f7s3g4lxwp" path="res://Assets/Structures & Machines/Steam_Engine_Running.png" id="1_t0lfx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbed1"]
+atlas = ExtResource("1_t0lfx")
+region = Rect2(0, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ot2hh"]
+atlas = ExtResource("1_t0lfx")
+region = Rect2(96, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mqw0"]
+atlas = ExtResource("1_t0lfx")
+region = Rect2(192, 0, 96, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lskv"]
+atlas = ExtResource("1_t0lfx")
+region = Rect2(288, 0, 96, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ujnyw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbed1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ot2hh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mqw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lskv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SteamEngine" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ujnyw")
+frame_progress = 0.4009825

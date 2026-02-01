@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmqo5tuot156l"]
+
+[ext_resource type="Texture2D" uid="uid://cjppdbtpwoepy" path="res://Assets/Structures & Machines/Assembler_Machine_1_Running.png" id="1_3jmux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsd7n"]
+atlas = ExtResource("1_3jmux")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxums"]
+atlas = ExtResource("1_3jmux")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43nuq"]
+atlas = ExtResource("1_3jmux")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lideq"]
+atlas = ExtResource("1_3jmux")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u1i80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsd7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxums")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43nuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lideq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AssemblerMachine1" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_u1i80")
+frame_progress = 0.24342577

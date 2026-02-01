@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://kj5x4yopsix3"]
+
+[ext_resource type="Texture2D" uid="uid://bu7py47v0o5ja" path="res://Assets/Automation Components/Conveyor_Belt.png" id="1_46jdn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbjgc"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(0, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dn4e"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(96, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdpjf"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(192, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfqui"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(288, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bvr6"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(384, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0pw0"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(480, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi3ho"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(576, 32, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ypd8"]
+atlas = ExtResource("1_46jdn")
+region = Rect2(672, 32, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vcess"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbjgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dn4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdpjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfqui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bvr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0pw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fi3ho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ypd8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LeftBelt" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_vcess")
+frame_progress = 0.33986473
