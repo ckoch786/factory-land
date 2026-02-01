@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bx4ckaf8a4vdu"]
+[gd_scene load_steps=0 format=3 uid="uid://bx4ckaf8a4vdu"]
 
 [ext_resource type="Texture2D" uid="uid://cqo3f78hpqr5k" path="res://Assets/Automation Components/Robotic_Arms_1.png" id="1_78m72"]
 [ext_resource type="Script" uid="uid://cskqtd8enn111" path="res://Scripts/robotic_arm.gd" id="2_gey3j"]
