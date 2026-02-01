@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://d4lloj0haj7d0"]
+[gd_scene format=3 uid="uid://d4lloj0haj7d0"]
 
 [ext_resource type="Script" uid="uid://dsvfj4wcgsfao" path="res://Scripts/player.gd" id="1_gymyn"]
 [ext_resource type="Texture2D" uid="uid://v53kh8k83yay" path="res://Assets/Character/Character_Idle_Back.png" id="1_tx1dd"]
@@ -345,14 +345,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gymyn"]
+radius = 6.0
+height = 20.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1627693553]
+collision_mask = 2
 script = ExtResource("1_gymyn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=320908620]
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_n1x1j")
 animation = &"back_idle"
 frame_progress = 0.94394165
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1383173493]
 position = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=60585405]
+shape = SubResource("CapsuleShape2D_gymyn")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs7a84ut7mi6r"]
+[gd_scene format=3 uid="uid://bs7a84ut7mi6r"]
 
 [ext_resource type="Texture2D" uid="uid://iv6klkbsulga" path="res://Assets/Structures & Machines/Stone_Furnace_Active.png" id="1_uvjj3"]
+[ext_resource type="Script" uid="uid://cs83uimjwp1q5" path="res://Scripts/stone_furnace.gd" id="2_vleli"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vleli"]
 atlas = ExtResource("1_uvjj3")
@@ -31,6 +32,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="StoneFurnace" type="AnimatedSprite2D"]
+[node name="StoneFurnace" type="AnimatedSprite2D" unique_id=756492217]
 sprite_frames = SubResource("SpriteFrames_xgiib")
 frame_progress = 0.7247004
+script = ExtResource("2_vleli")

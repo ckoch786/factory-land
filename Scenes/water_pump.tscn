@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddtrbcifc6jpn"]
+[gd_scene format=3 uid="uid://ddtrbcifc6jpn"]
 
 [ext_resource type="Texture2D" uid="uid://ddlfw8jrfuspy" path="res://Assets/Structures & Machines/Water_Pump_Running.png" id="1_sdk44"]
+[ext_resource type="Script" uid="uid://dbv3f7o7bqkah" path="res://Scripts/water_pump.gd" id="2_nf7ua"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nf7ua"]
 atlas = ExtResource("1_sdk44")
@@ -24,6 +25,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="WaterPump" type="AnimatedSprite2D"]
+[node name="WaterPump" type="AnimatedSprite2D" unique_id=1534377120]
 sprite_frames = SubResource("SpriteFrames_as22v")
 frame_progress = 0.48745865
+script = ExtResource("2_nf7ua")

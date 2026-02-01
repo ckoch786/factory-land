@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://kj5x4yopsix3"]
+[gd_scene format=3 uid="uid://kj5x4yopsix3"]
 
 [ext_resource type="Texture2D" uid="uid://bu7py47v0o5ja" path="res://Assets/Automation Components/Conveyor_Belt.png" id="1_46jdn"]
+[ext_resource type="Script" uid="uid://c1bpnetutmnx2" path="res://Scripts/left_belt.gd" id="2_hbjgc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbjgc"]
 atlas = ExtResource("1_46jdn")
@@ -66,6 +67,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="LeftBelt" type="AnimatedSprite2D"]
+[node name="LeftBelt" type="AnimatedSprite2D" unique_id=1006260618]
 sprite_frames = SubResource("SpriteFrames_vcess")
 frame_progress = 0.33986473
+script = ExtResource("2_hbjgc")

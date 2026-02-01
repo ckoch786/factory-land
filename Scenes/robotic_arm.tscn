@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bx4ckaf8a4vdu"]
+
+[ext_resource type="Texture2D" uid="uid://cqo3f78hpqr5k" path="res://Assets/Automation Components/Robotic_Arms_1.png" id="1_78m72"]
+[ext_resource type="Script" uid="uid://cskqtd8enn111" path="res://Scripts/robotic_arm.gd" id="2_gey3j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gey3j"]
+atlas = ExtResource("1_78m72")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byfb6"]
+atlas = ExtResource("1_78m72")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpcd8"]
+atlas = ExtResource("1_78m72")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43n5b"]
+atlas = ExtResource("1_78m72")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uchxd"]
+atlas = ExtResource("1_78m72")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lp8bb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gey3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byfb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpcd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43n5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uchxd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RoboticArm" type="AnimatedSprite2D" unique_id=1218975093]
+sprite_frames = SubResource("SpriteFrames_lp8bb")
+frame = 4
+frame_progress = 0.71664333
+script = ExtResource("2_gey3j")

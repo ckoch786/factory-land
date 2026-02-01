@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0bykfk7imcl7"]
+[gd_scene format=3 uid="uid://d0bykfk7imcl7"]
 
 [ext_resource type="Texture2D" uid="uid://bkpc1nnpxti5l" path="res://Assets/Structures & Machines/Boiler_Running.png" id="1_bmfhk"]
+[ext_resource type="Script" uid="uid://m14tevgrgbsm" path="res://Scripts/boiler.gd" id="2_ddl3j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ddl3j"]
 atlas = ExtResource("1_bmfhk")
@@ -24,6 +25,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Boiler" type="AnimatedSprite2D"]
+[node name="Boiler" type="AnimatedSprite2D" unique_id=1255601800]
 sprite_frames = SubResource("SpriteFrames_isrpc")
 frame_progress = 0.87256783
+script = ExtResource("2_ddl3j")

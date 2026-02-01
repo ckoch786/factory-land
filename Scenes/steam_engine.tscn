@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cenvapfpkpb71"]
+[gd_scene format=3 uid="uid://cenvapfpkpb71"]
 
 [ext_resource type="Texture2D" uid="uid://dx6f7s3g4lxwp" path="res://Assets/Structures & Machines/Steam_Engine_Running.png" id="1_t0lfx"]
+[ext_resource type="Script" uid="uid://b12c5gr8r2skk" path="res://Scripts/steam_engine.gd" id="2_sbed1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sbed1"]
 atlas = ExtResource("1_t0lfx")
@@ -38,6 +39,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SteamEngine" type="AnimatedSprite2D"]
+[node name="SteamEngine" type="AnimatedSprite2D" unique_id=964499308]
 sprite_frames = SubResource("SpriteFrames_ujnyw")
 frame_progress = 0.4009825
+script = ExtResource("2_sbed1")
