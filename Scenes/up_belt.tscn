@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://cv5pxwx1gw4eh"]
+
+[ext_resource type="Script" uid="uid://c1bpnetutmnx2" path="res://Scripts/left_belt.gd" id="1_maq3c"]
+[ext_resource type="Texture2D" uid="uid://bu7py47v0o5ja" path="res://Assets/Automation Components/Conveyor_Belt.png" id="2_7p4l8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahr0m"]
+atlas = ExtResource("2_7p4l8")
+region = Rect2(64, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2omyb"]
+atlas = ExtResource("2_7p4l8")
+region = Rect2(160, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrw23"]
+atlas = ExtResource("2_7p4l8")
+region = Rect2(256, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v732a"]
+atlas = ExtResource("2_7p4l8")
+region = Rect2(352, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr4v6"]
+atlas = ExtResource("2_7p4l8")
+region = Rect2(448, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44ubv"]
+atlas = ExtResource("2_7p4l8")
+region = Rect2(544, 0, 16, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t3gx"]
+atlas = ExtResource("2_7p4l8")
+region = Rect2(640, 0, 16, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ywe4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahr0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2omyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrw23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v732a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr4v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44ubv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t3gx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbjgc"]
+size = Vector2(93.75003, 45)
+
+[node name="UpBelt" type="Area2D"]
+script = ExtResource("1_maq3c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8ywe4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.49999934, -8.499999)
+rotation = -3.1415925
+scale = Vector2(0.15999997, -1)
+shape = SubResource("RectangleShape2D_hbjgc")

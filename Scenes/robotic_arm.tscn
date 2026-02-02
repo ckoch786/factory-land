@@ -1,7 +1,7 @@
-[gd_scene load_steps=0 format=3 uid="uid://bx4ckaf8a4vdu"]
+[gd_scene load_steps=10 format=3 uid="uid://bnxolviqbu006"]
 
 [ext_resource type="Texture2D" uid="uid://cqo3f78hpqr5k" path="res://Assets/Automation Components/Robotic_Arms_1.png" id="1_78m72"]
-[ext_resource type="Script" uid="uid://cskqtd8enn111" path="res://Scripts/robotic_arm.gd" id="2_gey3j"]
+[ext_resource type="Script" uid="uid://bn5xd6wfswuuj" path="res://Scripts/robotic_arm.gd" id="2_gey3j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gey3j"]
 atlas = ExtResource("1_78m72")
@@ -46,8 +46,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="RoboticArm" type="AnimatedSprite2D" unique_id=1218975093]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_byfb6"]
+size = Vector2(11, 7)
+
+[node name="RoboticArm" type="AnimatableBody2D"]
+script = ExtResource("2_gey3j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lp8bb")
 frame = 4
 frame_progress = 0.71664333
-script = ExtResource("2_gey3j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2.5)
+shape = SubResource("RectangleShape2D_byfb6")

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ddtrbcifc6jpn"]
+[gd_scene load_steps=7 format=3 uid="uid://ddtrbcifc6jpn"]
 
 [ext_resource type="Texture2D" uid="uid://ddlfw8jrfuspy" path="res://Assets/Structures & Machines/Water_Pump_Running.png" id="1_sdk44"]
 [ext_resource type="Script" uid="uid://dbv3f7o7bqkah" path="res://Scripts/water_pump.gd" id="2_nf7ua"]
@@ -25,7 +25,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="WaterPump" type="AnimatedSprite2D" unique_id=1534377120]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nf7ua"]
+size = Vector2(48, 9.5)
+
+[node name="WaterPump" type="AnimatableBody2D"]
+script = ExtResource("2_nf7ua")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_as22v")
 frame_progress = 0.48745865
-script = ExtResource("2_nf7ua")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10.75)
+shape = SubResource("RectangleShape2D_nf7ua")

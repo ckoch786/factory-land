@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://t6ri51mw6pbt"]
+
+[ext_resource type="Texture2D" uid="uid://bwpymf3cl8h4v" path="res://Assets/Tileset & Environment/Tree.png" id="1_0vwjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7sa7"]
+size = Vector2(12.5, 5)
+
+[node name="Tree" type="AnimatableBody2D"]
+y_sort_enabled = true
+position = Vector2(-1, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_l7sa7")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("1_0vwjc")
+offset = Vector2(0, -15)
+flip_h = true

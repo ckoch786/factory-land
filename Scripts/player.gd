@@ -11,7 +11,7 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	player_movement(delta)
 	
-func player_movement(delta: float):
+func player_movement(_delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
@@ -46,25 +46,25 @@ func play_animation(movement):
 	if dir == "right":
 		animation.flip_h = false
 		if movement == 1:
-			animation.play("side_walk")
+			animation.play("right_walk")
 		elif movement == 0:
-			animation.play("side_idle")
+			animation.play("right_idle")
 	elif dir == "left":
-		animation.flip_h = true
+		animation.flip_h = false
 		if movement == 1:
-			animation.play("side_walk")
+			animation.play("left_walk")
 		elif movement == 0:
-			animation.play("side_idle")
+			animation.play("left_idle")
 	elif dir == "down":
 		animation.flip_h = false
 		if movement == 1:
-			animation.play("front_walk")
+			animation.play("walk_forward")
 		elif movement == 0:
 			animation.play("front_idle")
 	elif dir == "up":
 		animation.flip_h = false
 		if movement == 1:
-			animation.play("back_walk")
+			animation.play("walk_back")
 		elif movement == 0:
 			animation.play("back_idle")
 			

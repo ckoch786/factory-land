@@ -1,5 +1,5 @@
-extends AnimatedSprite2D
+extends AnimatableBody2D
 
 
 func _ready() -> void:
-	play("default")
+	$AnimatedSprite2D.play("default")

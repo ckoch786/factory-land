@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cenvapfpkpb71"]
+[gd_scene load_steps=9 format=3 uid="uid://cenvapfpkpb71"]
 
+[ext_resource type="Script" uid="uid://cwv2ly81hmnlf" path="res://Scripts/steam_engine.gd" id="1_sbed1"]
 [ext_resource type="Texture2D" uid="uid://dx6f7s3g4lxwp" path="res://Assets/Structures & Machines/Steam_Engine_Running.png" id="1_t0lfx"]
-[ext_resource type="Script" uid="uid://b12c5gr8r2skk" path="res://Scripts/steam_engine.gd" id="2_sbed1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sbed1"]
 atlas = ExtResource("1_t0lfx")
@@ -39,7 +39,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SteamEngine" type="AnimatedSprite2D" unique_id=964499308]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ot2hh"]
+size = Vector2(97, 19)
+
+[node name="SteamEngine" type="AnimatableBody2D"]
+script = ExtResource("1_sbed1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ujnyw")
 frame_progress = 0.4009825
-script = ExtResource("2_sbed1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 28.5)
+shape = SubResource("RectangleShape2D_ot2hh")

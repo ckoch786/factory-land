@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://kj5x4yopsix3"]
+[gd_scene load_steps=13 format=3 uid="uid://kj5x4yopsix3"]
 
 [ext_resource type="Texture2D" uid="uid://bu7py47v0o5ja" path="res://Assets/Automation Components/Conveyor_Belt.png" id="1_46jdn"]
 [ext_resource type="Script" uid="uid://c1bpnetutmnx2" path="res://Scripts/left_belt.gd" id="2_hbjgc"]
@@ -67,7 +67,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="LeftBelt" type="AnimatedSprite2D" unique_id=1006260618]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbjgc"]
+size = Vector2(44, 13)
+
+[node name="LeftBelt" type="Area2D"]
+script = ExtResource("2_hbjgc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vcess")
 frame_progress = 0.33986473
-script = ExtResource("2_hbjgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_hbjgc")

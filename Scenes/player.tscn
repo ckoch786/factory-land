@@ -346,7 +346,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gymyn"]
-radius = 6.0
+radius = 7.0
 height = 20.0
 
 [node name="Player" type="CharacterBody2D"]
